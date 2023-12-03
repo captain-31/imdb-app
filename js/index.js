@@ -83,14 +83,21 @@ const UIService = (function () {
         moviesHTML.innerHTML = `<p>${error}</p>`;
     }
 
-    function activateListeners() {
-        moviesHTML.addEventListener('click', function (e) {
-            if (e.target.id === 'add-to-fav') {
-                addToFavourite(e);
-            } else if (e.target.id === 'details') {
-                document.querySelector('form').reset();
-            }
-        });
+    function handleAddToFav(e) {
+        if (e.target.id === 'add-to-fav') {
+            addToFavourite(e);
+        } else if (e.target.id === 'details') {
+            document.querySelector('form').reset();
+        }
+    }
+
+    function activateListeners(addToFavHandler) {
+
+        // Remove the existing click event listener to avoid multiple bindings
+        moviesHTML.removeEventListener('click', handleAddToFav);
+
+        // Add the click event listener
+        moviesHTML.addEventListener('click', handleAddToFav);
     }
 
     return {
