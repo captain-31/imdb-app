@@ -1,7 +1,7 @@
 // movieService.js
 const MovieService = (function () {
     const apiKey = 'fcc8a310';
-    const url = 'http://www.omdbapi.com/';
+    const url = 'https://www.omdbapi.com/';
 
     async function getMovieById(id) {
         const apiUrl = `${url}?i=${id}&apikey=${apiKey}`;
