@@ -83,10 +83,10 @@ const UIService = (function () {
         moviesHTML.innerHTML = `<p>${error}</p>`;
     }
 
-    function activateListeners(addToFavHandler) {
+    function activateListeners() {
         moviesHTML.addEventListener('click', function (e) {
             if (e.target.id === 'add-to-fav') {
-                addToFavHandler(e);
+                addToFavourite(e);
             } else if (e.target.id === 'details') {
                 document.querySelector('form').reset();
             }
