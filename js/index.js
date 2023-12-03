@@ -112,7 +112,6 @@ async function handleSearch(e) {
         try {
             UIService.showLoading();
             const movies = await MovieService.getMoviesByTitle(title);
-            console.log(movies)
             if (movies.Response === 'True') {
                 UIService.renderMovies(movies.Search);
                 UIService.activateListeners(addToFavourite);
