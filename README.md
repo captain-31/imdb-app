@@ -41,5 +41,5 @@ This modular structure makes it easier to maintain, test, and understand each pa
 
 ## Demo
 
-http://url
+[http://url](https://captain-31.github.io/imdb-app/)https://captain-31.github.io/imdb-app/
 
